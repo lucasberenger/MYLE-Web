@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/style.css"> <!--Style-->
+    <script src="https://kit.fontawesome.com/4e522e190a.js" crossorigin="anonymous"></script> <!--Icons library-->
+    <script defer src="scripts/index.js"></script> <!-- JavaScript-->
     <title>MYLE!</title>
 </head>
 <body>
     <!-- Start Menu -->
-    <div id="start-menu">
-        <div>
+    <div id="start-menu" class="flex">
+        <div id="start-menu-content">
           <h1>Making your life easier</h1>
           <button id="start-button">Start</button>
         </div>
-      </div>    
+      </div>  
+      
+      <!-- Main Menu -->
+      <div id="main-menu" class="hide fade-in-fwd">
+        <!-- Main menu header (online status, some text and x mark to close the app) -->
+        <header id="main-menu-header">
+          <div id="online-status-icon" class="shinny"></div>
+          <h2>Welcome</h2>
+          <button id="close-main-menu"><i class="fa-solid fa-circle-xmark"></i></button>
+        </header>
+        <!-- Content must have be created in here -->
+        <!-- Tool bar must be placed on the bottom of the doc -->
+        <nav id="main-menu-tool-bar">
+          <button><i id="calculator-icon" class="fa-sharp fa-solid fa-calculator"></i></button>
+          <button><i id="notepad-icon" class="fa-sharp fa-solid fa-pen-to-square"></i></button>
+        </nav>
+      </div>
 </body>
 </html>

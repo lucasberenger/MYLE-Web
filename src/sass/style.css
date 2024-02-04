@@ -1,3 +1,19 @@
+/* Title Font - Poor Story*/
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
+/* Default Font - Unbuntu */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
 html body {
   font-size: 62.5%;
 }
@@ -9,8 +25,129 @@ html body {
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 body {
   height: 100vh;
   width: 100%;
   background: #A78BFA;
+  font-family: "Unbuntu";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-menu {
+  height: 23rem;
+  width: 16rem;
+  border-radius: 10px;
+  border: 2px solid #F3F4F6;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+#start-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-family: "Poor Story";
+  color: #F3F4F6;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+#start-button {
+  width: 5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #F3F4F6;
+  font-size: 1rem;
+  font-weight: bolder;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+#start-button:hover {
+  transform: scale(1.2);
+}
+
+#main-menu {
+  height: 100%;
+  width: 100%;
+  border: 5px solid #F3F4F6;
+  transition: all 1s;
+}
+
+#main-menu-header {
+  height: 2rem;
+  width: 100%;
+  background: #F3F4F6;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#online-status-icon {
+  height: 1rem;
+  width: 1rem;
+  background: #49a16b;
+  border-radius: 100%;
+  animation: shinny 1s;
+}
+
+h2 {
+  font-family: "Poor Story";
+  color: #000000;
+  font-size: 2rem;
+}
+
+#close-main-menu {
+  color: #DC2626;
+  font-size: 1.2rem;
+}
+
+#main-menu-tool-bar {
+  align-self: flex-end;
+  height: 2rem;
+  width: 100%;
+  background: #F3F4F6;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in-fwd {
+  animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes shinny {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

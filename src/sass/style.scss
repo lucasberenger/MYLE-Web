@@ -1,5 +1,23 @@
 // colors: 
 @import "partials/_colors.scss";
+// Fonts: 
+@import "partials/fonts";
+
+// DOM Classes 
+
+.hide {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+// General Styles
 
 html {
     body {
@@ -14,10 +32,177 @@ html {
     box-sizing: border-box;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+}
+
 body {
     height: 100vh;
     width: 100%;
     background: $primary-violet;
+    font-family: $defaultFont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+// Start app
+
+#start-menu {
+    height: 23rem;
+    width: 16rem;
+    border-radius: 10px;
+    border: 2px solid $primary-gray;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+
+#start-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-family: $titleFont;
+    color: $primary-gray;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+#start-button {
+    width: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: $primary-gray;
+    font-size: 1rem;
+    font-weight: bolder;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition: all .5s;
+}
+
+
+#start-button:hover {
+    transform: scale(1.2);
+}
+
+// Main-menu General Settings
+
+#main-menu {
+    height: 100%;
+    width: 100%;
+    border: 5px solid $primary-gray;
+    transition: all 1s;
+}
+
+// main menu header
+
+#main-menu-header {
+    height: 2rem;
+    width: 100%;
+    background: $primary-gray;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#online-status-icon {
+    height: 1rem;
+    width: 1rem;
+    background: $default-green;
+    border-radius: 100%;
+    animation: shinny 1s;
+}
+
+h2 {
+    font-family: $titleFont;
+    color: $primary-black;
+    font-size: 2rem;
+}
+
+#close-main-menu {
+    color: $primary-red;
+    font-size: 1.2rem;
+}
+
+// main menu navbar (tool-bar) settings
+
+#main-menu-tool-bar {
+    align-self: flex-end;
+
+    height: 2rem;
+    width: 100%;
+    background: $primary-gray;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+// Effects 
+// fade-in 
+.fade-in-fwd {
+	-webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+// Shinny
+
+@keyframes shinny {
+    0% {
+      opacity: 0%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+
+      opacity: 100%;
+    }
+  }
+
+
+
+
+
 
 

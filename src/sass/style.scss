@@ -32,11 +32,6 @@ html {
     box-sizing: border-box;
 }
 
-button {
-    cursor: pointer;
-    border: none;
-}
-
 body {
     height: 100vh;
     width: 100%;
@@ -45,6 +40,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
 }
 
 // Start app
@@ -135,9 +135,7 @@ h2 {
 // main menu navbar (tool-bar) settings
 
 #main-menu-tool-bar {
-    align-self: flex-end;
-
-    height: 2rem;
+    height: 2.3rem;
     width: 100%;
     background: $primary-gray;
     padding: 1rem;
@@ -145,7 +143,98 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
 }
+
+#main-menu-tool-bar {
+    button {
+        color: $primary-violet;
+    }
+}
+
+#main-menu-tool-bar {
+    button {
+        i{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+#main-menu-tool-bar{
+    button{
+        i:hover {
+            color: $dark-violet
+        }
+    }
+}
+
+// Tools
+
+#notepad {
+    height: 20rem;
+    width: 25rem;
+    background: $secondary-gray;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#notepad-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#notepad-header {
+    button {
+        background: none;
+    }
+}
+
+#notepad-header {
+    button {
+        i {
+            color: $primary-black;
+        }
+    }
+}
+
+#notepad {
+    textarea {
+        height: 90%;
+        width: 90%;
+        margin: 0.5rem auto;
+        resize: none;
+    }
+}
+
+#notepad-buttons {
+    width: 100%;
+    background: $primary-gray;
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#notepad-buttons {
+    button {
+        color: $primary-gray;
+        background: $primary-violet;
+        border: none;
+        border-radius: 5px;
+    }
+}
+    
+    
+
+// Main content (app selection) 
+main {
+    height: 93%;
+    width: 100%;
+    background: $primary-violet;
+}
+
+
 
 
 

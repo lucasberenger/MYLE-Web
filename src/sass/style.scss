@@ -175,7 +175,6 @@ h2 {
     width: 25rem;
     background: $secondary-gray;
 
-    display: flex;
     flex-direction: column;
 }
 
@@ -187,6 +186,7 @@ h2 {
 #notepad-header {
     button {
         background: none;
+        margin-right: 1.2rem;
     }
 }
 
@@ -213,7 +213,7 @@ h2 {
 
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 #notepad-buttons {
@@ -221,7 +221,9 @@ h2 {
         color: $primary-gray;
         background: $primary-violet;
         border: none;
-        border-radius: 5px;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        width: 10rem;
     }
 }
     

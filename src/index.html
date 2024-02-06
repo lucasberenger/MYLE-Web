@@ -27,10 +27,10 @@
         </header>
         <main>
           <!-- Content must have be created in here -->
-          <div id="notepad">
+          <div id="notepad" class="hide">
             <div id="notepad-header">
-              <button><i class="fa-solid fa-window-minimize"></i></button>
-              <button><i class="fa-solid fa-xmark"></i></button>
+              <button id="notepad-window-minimize"><i class="fa-solid fa-window-minimize"></i></button>
+              <button id="notepad-close-window"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <textarea id="note-text"></textarea>
             <div id="notepad-buttons">
@@ -40,8 +40,8 @@
           </div>
           <!-- Tool bar -->
            <nav id="main-menu-tool-bar">
-            <button><i id="calculator-icon" class="fa-sharp fa-solid fa-calculator"></i></button>
-            <button><i id="notepad-icon" class="fa-sharp fa-solid fa-pen-to-square"></i></button>
+            <button id="toolbar-calculator"><i id="calculator-icon" class="fa-sharp fa-solid fa-calculator"></i></button>
+            <button id="toolbar-notepad"><i id="notepad-icon" class="fa-sharp fa-solid fa-pen-to-square"></i></button>
           </nav>
         </main>
       </div>

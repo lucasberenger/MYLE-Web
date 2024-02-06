@@ -143,7 +143,6 @@ h2 {
   height: 20rem;
   width: 25rem;
   background: #FAFAFA;
-  display: flex;
   flex-direction: column;
 }
 
@@ -154,6 +153,7 @@ h2 {
 
 #notepad-header button {
   background: none;
+  margin-right: 1.2rem;
 }
 
 #notepad-header button i {
@@ -172,14 +172,16 @@ h2 {
   background: #F3F4F6;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 #notepad-buttons button {
   color: #F3F4F6;
   background: #A78BFA;
   border: none;
-  border-radius: 5px;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  width: 10rem;
 }
 
 main {

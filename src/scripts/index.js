@@ -4,6 +4,11 @@ const startAplication = document.getElementById('start-button')
 // Main menu vars
 const mainMenu = document.getElementById('main-menu')
 const closeMainMenu = document.getElementById('close-main-menu')
+// Notepad Vars 
+const notepadToolbar = document.getElementById('toolbar-notepad') // Notepad button in the toolbar 
+const notepad = document.getElementById('notepad') // Notepad element itself
+const windowMinimize = document.getElementById('notepad-window-minimize') //window minimize button
+const closeWindow = document.getElementById('notepad-close-window') // close window button
 
 // Start App / quit App 
 
@@ -33,6 +38,48 @@ startAplication.addEventListener('click', () => {
 closeMainMenu.addEventListener('click', () => {
     quitApp()
 })
+
+// Notepad Functions and  Events 
+// opens the notepad when the toolbar button is clicked. While the notepad is open, if the toolbar is clicked, the notepad is minimized
+function openNotepad() {
+    if(notepad.classList.contains('hide')) {
+        notepad.classList.remove('hide')
+        notepad.classList.add('flex')
+    } else {
+        notepad.classList.remove('flex')
+        notepad.classList.add('hide')
+    }
+}
+
+
+notepadToolbar.addEventListener('click', () => {
+    openNotepad()
+})
+
+function closeNotepad() {
+    notepad.classList.remove('flex')
+    notepad.classList.add('hide')
+
+    
+    
+}
+// closes the notepad
+closeWindow.addEventListener('click', () => {
+    closeNotepad()
+})
+
+// minimizes the notepad
+function minimizeNotepad() {
+    notepad.classList.remove('flex')
+    notepad.classList.add('hide')
+}
+
+windowMinimize.addEventListener('click', () => {
+    minimizeNotepad()
+})
+
+
+
 
 
 

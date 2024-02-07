@@ -236,8 +236,43 @@ main {
   background: #F3F4F6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+#tasklist-input {
+  width: 20rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #A78BFA;
+  border-radius: 1rem;
+}
+
+#tasklist-add {
+  width: 10rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background: #A78BFA;
+  color: #F3F4F6;
+  font-weight: bold;
+}
+
+#tasklist-output {
+  height: 20rem;
+  width: 90%;
+  background: #fff;
+  border: 1px solid #A78BFA;
+  border-radius: 1rem;
+}
+
+#tasklist-clearall {
+  width: 10rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background: #A78BFA;
+  color: #F3F4F6;
+  font-weight: bold;
+  margin: 1rem;
 }
 
 .fade-in-fwd {

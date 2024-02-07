@@ -12,6 +12,10 @@ const closeWindow = document.getElementById('notepad-close-window') // Close win
 const notepadText = document.getElementById('notepad-text-input') // Text area
 const copyText = document.getElementById('copy-text') // Copy text button
 const clearText = document.getElementById('clear-text') // Clear text button
+// tasklist vars
+const newTask = document.getElementById('tasklist-input') // Tasklist input area
+const tasklist = document.getElementById('tasklist-output-area')// tasklist output 
+const addTask = document.getElementById('tasklist-add') // tasklist add button
 
 // Start App / quit App 
 
@@ -135,6 +139,15 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('mouseup', () => {
     isDragging = false
     notepad.style.cursor = 'grab'
+})
+
+// Tasklist 
+function addNewTask() {
+    tasklist.innerHTML += `<li>${newTask.value}</li>`
+}
+
+addTask.addEventListener('click', () => {
+    addNewTask()
 })
 
 

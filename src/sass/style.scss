@@ -286,8 +286,43 @@ main {
     background: $primary-gray;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+#tasklist-input {
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid $primary-violet;
+    border-radius: 1rem;
+}
+
+// default settings for buttons
+@mixin button-theme {
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background: $primary-violet;
+    color: $primary-gray;
+    font-weight: bold;
+}
+
+#tasklist-add {
+   @include button-theme;
+}
+
+#tasklist-output {
+    height: 20rem;
+    width: 90%;
+    background: #fff;
+    border: 1px solid $primary-violet;
+    border-radius: 1rem;
+}
+
+#tasklist-clearall {
+    @include button-theme;
+    margin: 1rem;
 }
 
 

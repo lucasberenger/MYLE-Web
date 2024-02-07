@@ -1,7 +1,8 @@
 // colors: 
-@import "partials/_colors.scss";
+@import 'partials/colors';
 // Fonts: 
-@import "partials/fonts";
+@import 'partials/fonts';
+
 
 // DOM Classes 
 
@@ -255,14 +256,39 @@ main {
 }
 
 #select-menu {
-    height: 50%;
+    height: 60%;
     width: 80%;
     margin-top: 10rem;
     background: $primary-gray;
     border-radius: 10px;
 }
 
+// Tasklist 
+#tasklist {
+    position: relative;
+}
 
+#tasklist-tab {
+    padding: 1rem;
+    width: 10rem;
+    position: absolute;
+    top: -2rem;
+    
+    background-color: $primary-gray;
+    font-weight: 700;
+    color: $primary-black;
+    border-radius: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+#tasklist-content {
+    height: 20rem;
+    width: 100%;
+    background: $primary-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

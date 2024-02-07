@@ -208,11 +208,36 @@ main {
 }
 
 #select-menu {
-  height: 50%;
+  height: 60%;
   width: 80%;
   margin-top: 10rem;
   background: #F3F4F6;
   border-radius: 10px;
+}
+
+#tasklist {
+  position: relative;
+}
+
+#tasklist-tab {
+  padding: 1rem;
+  width: 10rem;
+  position: absolute;
+  top: -2rem;
+  background-color: #F3F4F6;
+  font-weight: 700;
+  color: #000000;
+  border-radius: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+#tasklist-content {
+  height: 20rem;
+  width: 100%;
+  background: #F3F4F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .fade-in-fwd {

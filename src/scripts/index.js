@@ -1,14 +1,17 @@
 // Start app vars
-const startMenu = document.getElementById('start-menu')
-const startAplication = document.getElementById('start-button')
+const startMenu = document.getElementById('start-menu') // Start menu
+const startAplication = document.getElementById('start-button') // Start app button
 // Main menu vars
-const mainMenu = document.getElementById('main-menu')
-const closeMainMenu = document.getElementById('close-main-menu')
+const mainMenu = document.getElementById('main-menu') // Main menu
+const closeMainMenu = document.getElementById('close-main-menu') // Close app button (x on the top right)
 // Notepad Vars 
 const notepadToolbar = document.getElementById('toolbar-notepad') // Notepad button in the toolbar 
 const notepad = document.getElementById('notepad') // Notepad element itself
-const windowMinimize = document.getElementById('notepad-window-minimize') //window minimize button
-const closeWindow = document.getElementById('notepad-close-window') // close window button
+const windowMinimize = document.getElementById('notepad-window-minimize') // Window minimize button
+const closeWindow = document.getElementById('notepad-close-window') // Close window button
+const notepadText = document.getElementById('notepad-text-input') // Text area
+const copyText = document.getElementById('copy-text') // Copy text button
+const clearText = document.getElementById('clear-text') // Clear text button
 
 // Start App / quit App 
 
@@ -60,9 +63,12 @@ function closeNotepad() {
     notepad.classList.remove('flex')
     notepad.classList.add('hide')
 
+    // notepadText.value = '' // text cleaning
+    clear()
+}   
+
     
     
-}
 // closes the notepad
 closeWindow.addEventListener('click', () => {
     closeNotepad()
@@ -78,6 +84,23 @@ windowMinimize.addEventListener('click', () => {
     minimizeNotepad()
 })
 
+// Clear text function
+function clear() {
+    notepadText.value = '' // clears the text
+}
+
+clearText.addEventListener('click', () => {
+    clear()
+})
+
+// Copy text function 
+function copy() { 
+    navigator.clipboard.writeText(notepadText.value) // copies the text in the text area
+}
+
+copyText.addEventListener('click', () => {
+    copy() 
+})
 
 
 

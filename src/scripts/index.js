@@ -42,15 +42,18 @@ closeMainMenu.addEventListener('click', () => {
     quitApp()
 })
 
-// Notepad Functions and  Events 
+// ----------------- Notepad Functions and  Events -------------------
 // opens the notepad when the toolbar button is clicked. While the notepad is open, if the toolbar is clicked, the notepad is minimized
 function openNotepad() {
+
     if(notepad.classList.contains('hide')) {
         notepad.classList.remove('hide')
         notepad.classList.add('flex')
+       
     } else {
         notepad.classList.remove('flex')
         notepad.classList.add('hide')
+        
     }
 }
 
@@ -63,8 +66,13 @@ function closeNotepad() {
     notepad.classList.remove('flex')
     notepad.classList.add('hide')
 
+    // move the notepad to its initial position
+    notepad.style.top = '50%' 
+    notepad.style.left = '50%'
+
     // notepadText.value = '' // text cleaning
     clear()
+
 }   
 
     
@@ -128,6 +136,8 @@ document.addEventListener('mouseup', () => {
     isDragging = false
     notepad.style.cursor = 'grab'
 })
+
+
 
 
 

@@ -81,11 +81,13 @@ h1 {
 }
 
 #main-menu {
-  height: 100%;
+  height: inherit;
   width: 100%;
   position: relative;
   border: 5px solid #F3F4F6;
   transition: all 1s;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #main-menu-header {
@@ -148,6 +150,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #FAFAFA;
+  border-radius: 10px;
   flex-direction: column;
 }
 
@@ -165,14 +168,19 @@ h2 {
   color: #000000;
 }
 
+.fa-xmark {
+  margin-top: 10px;
+}
+
 #notepad textarea {
-  height: 80%;
+  height: 85%;
   width: 90%;
   margin: 0.5rem auto;
   resize: none;
 }
 
 #notepad-buttons {
+  height: 3rem;
   width: inherit;
   display: flex;
   justify-content: center;
@@ -180,18 +188,31 @@ h2 {
 }
 
 #notepad-buttons button {
+  height: 2rem;
+  width: 10rem;
   color: #F3F4F6;
   background: #A78BFA;
   border: none;
   border-radius: 2rem;
   padding: 0.5rem;
-  width: 10rem;
 }
 
 main {
-  height: 93%;
+  height: 90vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background: #A78BFA;
+}
+
+#select-menu {
+  height: 50%;
+  width: 80%;
+  margin-top: 10rem;
+  background: #F3F4F6;
+  border-radius: 10px;
 }
 
 .fade-in-fwd {

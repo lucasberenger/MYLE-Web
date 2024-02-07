@@ -94,11 +94,14 @@ h1 {
 // Main-menu General Settings
 
 #main-menu {
-    height: 100%;
+    height: inherit;
     width: 100%;
     position: relative;
     border: 5px solid $primary-gray;
     transition: all 1s;
+    
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 // main menu header
@@ -179,6 +182,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     background: $secondary-gray;
+    border-radius: 10px;
 
     flex-direction: column;
 }
@@ -203,9 +207,13 @@ h2 {
     }
 }
 
+.fa-xmark {
+    margin-top: 10px;
+}
+
 #notepad {
     textarea {
-        height: 80%;
+        height: 85%;
         width: 90%;
         margin: 0.5rem auto;
         resize: none;
@@ -213,6 +221,7 @@ h2 {
 }
 
 #notepad-buttons {
+    height: 3rem;
     width: inherit;
 
     display: flex;
@@ -222,12 +231,13 @@ h2 {
 
 #notepad-buttons {
     button {
+        height: 2rem;
+        width: 10rem;
         color: $primary-gray;
         background: $primary-violet;
         border: none;
         border-radius: 2rem;
         padding: 0.5rem;
-        width: 10rem;
     }
 }
     
@@ -235,9 +245,21 @@ h2 {
 
 // Main content (app selection) 
 main {
-    height: 93%;
+    height: 90vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background: $primary-violet;
+}
+
+#select-menu {
+    height: 50%;
+    width: 80%;
+    margin-top: 10rem;
+    background: $primary-gray;
+    border-radius: 10px;
 }
 
 

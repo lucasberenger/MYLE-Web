@@ -83,6 +83,7 @@ h1 {
 #main-menu {
   height: 100%;
   width: 100%;
+  position: relative;
   border: 5px solid #F3F4F6;
   transition: all 1s;
 }
@@ -142,6 +143,10 @@ h2 {
 #notepad {
   height: 20rem;
   width: 25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #FAFAFA;
   flex-direction: column;
 }
@@ -161,15 +166,14 @@ h2 {
 }
 
 #notepad textarea {
-  height: 90%;
+  height: 80%;
   width: 90%;
   margin: 0.5rem auto;
   resize: none;
 }
 
 #notepad-buttons {
-  width: 100%;
-  background: #F3F4F6;
+  width: inherit;
   display: flex;
   justify-content: center;
   gap: 2rem;

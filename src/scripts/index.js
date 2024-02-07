@@ -102,6 +102,32 @@ copyText.addEventListener('click', () => {
     copy() 
 })
 
+// Dragging notepad function
+
+let isDragging = false
+let offsetX, offsetY
+
+notepad.addEventListener('mousedown',  (e) => {
+    isDragging = true
+    offsetX = e.clientX - parseFloat(getComputedStyle(notepad).left)
+    offsetY = e.clientY - parseFloat(getComputedStyle(notepad).top)
+    notepad.style.cursor = 'grabbing'
+})
+
+document.addEventListener('mousemove', (e) => {
+    if(isDragging) {
+        const x = e.clientX - offsetX
+        const y = e.clientY - offsetY
+
+        notepad.style.left = x + 'px'
+        notepad.style.top = y + 'px'
+    }
+})
+
+document.addEventListener('mouseup', () => {
+    isDragging = false
+    notepad.style.cursor = 'grab'
+})
 
 
 
